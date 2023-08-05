@@ -4,8 +4,10 @@ import {
   Typography,
   Button,
   makeStyles,
+  Avatar,
 } from "@material-ui/core";
 import { useHistory } from "react-router-dom";
+import iconJobs from "../assets/iconJobs.png";
 
 import isAuth, { userType } from "../lib/isAuth";
 
@@ -33,8 +35,9 @@ const Navbar = (props) => {
   return (
     <AppBar position="fixed">
       <Toolbar>
+        <Avatar alt="icon" src={iconJobs} />
         <Typography variant="h6" className={classes.title}>
-          Job Portal
+          BD JOBS
         </Typography>
         {isAuth() ? (
           userType() === "recruiter" ? (
